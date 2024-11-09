@@ -1,6 +1,4 @@
-Here’s a formatted and clean version suitable for GitHub, with Markdown syntax and code blocks for readability.
 
----
 
 # Assembly Program: `Num.asm`
 
