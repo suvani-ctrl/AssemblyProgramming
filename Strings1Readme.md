@@ -39,8 +39,7 @@ Before you start, make sure you have the following installed on your Linux machi
 
 NASM: The Netwide Assembler. Install it with:
 
-bash
-Copy code
+
 sudo apt install nasm
 ld: The Linux linker (usually pre-installed).
 
@@ -49,35 +48,28 @@ Follow these steps to assemble, link, and run the program:
 
 Assemble: Compile the assembly code into an object file:
 
-bash
-Copy code
 nasm -f elf32 -g -F dwarf -o strings.o strings.asm
 Link: Link the object file to create the executable:
 
-bash
-Copy code
+
 ld -m elf_i386 -o strings strings.o
 Run: Run the program:
 
-bash
-Copy code
+
 ./strings
 Debugging 🐞
 To debug the program and inspect the assembly code:
 
 Launch GDB:
 
-bash
-Copy code
+
 gdb ./strings
 Set a breakpoint at the _start label and run the program:
 
-gdb
-Copy code
+
 break _start
 run
 Disassemble the code to view the instructions:
 
-gdb
-Copy code
+
 disassemble _start
