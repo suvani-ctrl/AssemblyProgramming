@@ -7,7 +7,7 @@ Defines two strings, string1 and string2, in the .data section.
 Loads the first character of string1 into the bl register in the .text section.
 Exits the program using a system call.
 Code Explanation 📝
-Here's the code structure and what each part does:
+Here’s the code structure and what each part does:
 
 asm
 Copy code
@@ -24,11 +24,9 @@ _start:
     INT 80h                  ; Call the kernel to exit
 Sections Breakdown 📂
 .data: Holds data (strings) that we want to use in the program.
-
 string1: Contains "ABA", ending with a null byte (0).
 string2: Contains "CDE", also null-terminated.
 .text: Holds the executable code.
-
 _start: The main entry point for the program.
 MOV bl, [string1]: Loads the ASCII value of 'A' (first character of string1) into the bl register.
 MOV eax, 1 and INT 80h: Make a system call to exit the program.
@@ -58,4 +56,3 @@ bash
 Copy code
 gdb ./strings
 Use break _start, run, and disassemble commands to step through and inspect the code.
-
